@@ -6,7 +6,6 @@
   width: 100%;
   overflow-x: hidden;
   height: calc(100vh - 64px);
-  /* height: 100vh; */
   background-image: url("https://wallbox.ru/wallpapers/main2/201706/gorod-arhitektura-zdania-city-perspektiva-vecernij.jpg");
   background-position: top;
   background-size: cover;
@@ -62,3 +61,4 @@
   color: rgb(255, 255, 255);
   text-align: center;
 }
+
