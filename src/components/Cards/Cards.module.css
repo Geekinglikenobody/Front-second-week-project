@@ -1,0 +1,120 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .imgDiv {
+    background-color: white;
+  
+    height: 100%;
+  }
+  .oneCard {
+    height: 200px;
+    padding: 5px;
+    width: 280px;
+  }
+  
+  .domImg {
+    width: 100%;
+    height: 100%;
+  }
+  .topLine {
+    display: flex;
+    justify-content: space-between;
+  }
+  .point {
+    background-color: #d2d2d2;
+    border-radius: 999rem;
+    height: 0.25rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 0.25rem rem;
+  }
+  .midLine {
+    font-size: 14px;
+  }
+  
+  .oneCard {
+    margin-bottom: 30px;
+  }
+  
+  .png_button {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #d6dadc;
+    border-radius: 4px;
+    font-size: 17px;
+  }
+  
+  .imgPhone {
+    height: 25px;
+    width: 25px;
+  }
+  
+  .underLine {
+    display: flex;
+  }
+  .topLine {
+    display: flex;
+    font-size: 12px;
+  }
+  .btnFavorite {
+    background-color: transparent;
+    border: none;
+  }
+  .price {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .cottage {
+    font-size: 14px;
+  }
+  
+  .png_button {
+    margin: auto;
+  }
+  .png_button {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contentDiv {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid black;
+  }
+  .addresLine {
+    padding-top: 8px;
+  }
+  
+  .callPng {
+    margin-right: 8px;
+  }
+  
+  .underLine {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .haveGarage {
+    color: #4f4f4f;
+    background-color: #f1f1f1;
+    height: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .png_button:hover {
+      background-color: #f1f1f1;
+      cursor: pointer;
+  }
