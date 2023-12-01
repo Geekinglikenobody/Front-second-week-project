@@ -1,11 +1,11 @@
 import './App.css'
-import Cards from './components/Cards'
+import FilteredProperty from './components/FilteredProperty'
 
 function App() {
 
   return (
     <>
-    <Cards/>
+    <FilteredProperty/>
     </>
   )
 }
