@@ -1,14 +1,13 @@
 import './App.css'
-import Appp from './components/Appp/Appp'
-import Home from './components/Home/Home'
+import FilteredProperty from './components/FilteredProperty'
 
 function App() {
-	return (
-		<>
-			<Home/>
-			{/* <Appp /> */}
-		</>
-	)
+
+  return (
+    <>
+    <FilteredProperty/>
+    </>
+  )
 }
 
 export default App
