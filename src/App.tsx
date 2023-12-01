@@ -1,13 +1,16 @@
 import './App.css'
-import { FullPage } from "../src/components/FullPage/index";
+import Appp from './components/Appp/Appp'
+import Footer from './components/Footer/Index'
+import Home from './components/Home/Home'
 
 function App() {
-
-  return (
-    <>
-<FullPage/>
-    </>
-  )
+	return (
+		<>
+			<Home/>
+			<Footer/>
+			{/* <Appp /> */}
+		</>
+	)
 }
 
 export default App
