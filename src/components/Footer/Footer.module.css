@@ -1,0 +1,22 @@
+.mainDiv {
+  width: 100%;
+  height: 100px;
+  background: #04042d;
+  transition-duration: 1s;
+  overflow: hidden;
+  &:hover {
+    overflow: hidden;
+    box-shadow: inset -1px 1px 20px 12px #1f1d4a;
+  }
+}
+.mainDiv ul {
+  display: flex;
+  justify-content: center;
+}
+.mainDiv img {
+  width: 138px;
+  height: 120px;
+  &:hover {
+    cursor: pointer;
+  }
+}
