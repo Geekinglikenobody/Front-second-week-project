@@ -1,43 +1,34 @@
 // import React from "react";
 import styles from "../Header/Header.module.css";
+import logo from '../../assets/Logo.svg'
 // import logotip from "../../assets/log4.png";
 import { motion } from "framer-motion";
 import { forwardRef, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Header = forwardRef(() => {
-
   const textAnimation = {
     hidden: (custom) => ({
-      y: 100,
+      x: 100,
       opacity: 0,
+      transition: { easy: custom * 3 },
     }),
     visible: (custom) => ({
-      y: 0,
+      x: 0,
       opacity: 1,
-      transition: {linear: custom * 3}
-    })
-  }
+    }),
+  };
 
-  //   const icon = {
-  //   hidden: (custom) => ({
-  // 	delay: custom * 1,
-  //     z: 1000,
-  //     opacity: 0,
-  //     transition: {
-  //     },
-  //   }),
-  //   visible: (custom) => ({
-  //     z: 0,
-  //     opacity: 1,
-  //     transition: {
-  //       delay: custom * 1,
-  //     },
-  //   }),
-  // };
   return (
     <>
-      <motion.div viewport={{amount: 0.2, once: true}} custom={3} initial="hidden" whileInView="visible" variants={textAnimation} className={styles.mainDiv}>
+      <motion.div
+        viewport={{ amount: 0.2 }}
+        custom={3}
+        initial="hidden"
+        whileInView="visible"
+        variants={textAnimation}
+        className={styles.mainDiv}
+      >
         <header>
           <div className={styles.leftMenu}>
             <ul>
@@ -55,9 +46,14 @@ const Header = forwardRef(() => {
               </li>
             </ul>
           </div>
-          <div className={styles.logoPlace}>
-            <img alt="" width={130} height={60} />
-          </div>
+          <Link to={"/"} className={styles.logoPlace}>
+            <img
+              src={logo}
+              alt=""
+              width={130}
+              height={60}
+            />
+          </Link>
 
           <div className={styles.rightMenu}>
             <ul>

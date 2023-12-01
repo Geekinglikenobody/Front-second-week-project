@@ -87,3 +87,10 @@ input {
 .input {
   background-color: transparent;
 }
+
+.logoPlace img {
+  height: 70px;
+  &:hover {
+    box-shadow: -1px 1px 20px 20px #040151;
+  }
+}
