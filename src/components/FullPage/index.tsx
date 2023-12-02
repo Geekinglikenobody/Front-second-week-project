@@ -1,10 +1,23 @@
 import React from "react";
 import style from "../FullPage/FullPage.module.css";
 import prosmotr from "../../assets/prosmotr.png";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router";
 export const FullPage = () => {
+  const selectProp = useParams()
+  console.log(selectProp.id);
+  
+  const property = useSelector(state => state.property.property?.find((item) => {
+    if(item._id === selectProp.id){
+      return item
+    }
+  }))
+
+  console.log(property);
+  
   return (
     <div className={style.wrapper1}>
-      <div className={style.navig1}>
+        <div className={style.navig1}>
         <ul className={style.navig2}>
           <li>
             <span>Галерея</span>
@@ -27,18 +40,18 @@ export const FullPage = () => {
         <div className={style.images}>
           <img
             className={style.img1}
-            src="https://cdn.esoft.digital/19201080/cluster/photos/a2/07/f32b2d90e4c8af0254ee4595f8ab0150ac5d07a2.jpeg"
+            src={property.img[0]}
             alt=""
           />
           <div className={style.image}>
             <img
               className={style.img2}
-              src="https://cdn.esoft.digital/19201080/cluster/photos/7e/11/ac30097eba7e64b280f746846052a91c8ccc117e.jpeg"
+              src={property.img[1]}
               alt=""
             />
             <img
               className={style.img3}
-              src="https://cdn.esoft.digital/19201080/cluster/photos/bd/ed/7fc6958d5436c89045924e8e69cec6074a80edbd.jpeg"
+              src={property.img[2]}
             />
           </div>
           <div className={style.admin}>
