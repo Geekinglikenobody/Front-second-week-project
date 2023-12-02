@@ -9,6 +9,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  filter: drop-shadow(1px 2px 5px black);
 }
 ul {
   display: flex;
@@ -22,8 +23,8 @@ ul li {
   /* background-color: rgb(18, 20, 64); */
   background: linear-gradient(
     112.1deg,
-    rgb(32, 38, 57) 11.4%,
-    rgb(63, 76, 119) 70.2%
+    rgb(16 24 49) 11.4%,
+    rgb(20 23 33) 70.2%
   );
   color: antiquewhite;
   height: 100%;

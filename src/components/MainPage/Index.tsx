@@ -9,6 +9,7 @@ import {
   MotionValue,
   useViewportScroll,
 } from "framer-motion";
+import FilteredProperty from "../FilteredProperty";
 
 // function useParallax(value: MotionValue<number>, distance: number) {
 //   return useTransform(value, [0, 1], [-distance, distance]);
@@ -102,6 +103,7 @@ const MainPage = () => {
     },
   ];
 
+
   // const ref = useRef(null);
   // const { scrollYProgress } = useScroll({ target: ref });
   // const y = useParallax(scrollYProgress, 200);
@@ -128,10 +130,11 @@ const MainPage = () => {
     left: 0,
     behavior: "smooth",
   });
+
+
   return (
     <>
       <div 
-      // ref={ref} 
       className={styles.mainDiv}>
         <div className={styles.secondMainDiv}>
           <div className={styles.welcomeText}>
@@ -147,6 +150,7 @@ const MainPage = () => {
               Выбирайте жилье вместе с нами
             </motion.h1>
           </div>
+          <FilteredProperty />
         </div>
       </div>
       <div className={styles.secondViev}>

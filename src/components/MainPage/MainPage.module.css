@@ -9,12 +9,14 @@
   background-image: url("https://wallbox.ru/wallpapers/main2/201706/gorod-arhitektura-zdania-city-perspektiva-vecernij.jpg");
   background-position: top;
   background-size: cover;
+  filter: drop-shadow(2px 2px 25px black);
 }
 .secondMainDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 7px;
 }
 .secondViev {
   display: flex;
@@ -41,15 +43,19 @@
   border-radius: 8px;
   box-sizing: border-box;
   display: inline-block;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
   &:hover {
     box-shadow: inset 0px 0px 20px 9px #1f1d4a;
   }
 }
 .cardOfItem img {
-  width: 206px;
+  width: 33%;
   height: 182px;
   padding: 5px;
   border-radius: 10px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
   &:hover {
     cursor: pointer;
     box-shadow: inset 0px 0px 20px 0px #1f1d4a;
@@ -61,4 +67,3 @@
   color: rgb(255, 255, 255);
   text-align: center;
 }
-
