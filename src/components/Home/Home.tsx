@@ -1,12 +1,13 @@
 import React from 'react'
 import MainPage from '../MainPage/Index'
 import Header from '../Header/Header'
+import Footer from '../Footer/Index'
 
 const Home = () => {
   return (
     <>
-        <Header/>
-        <MainPage/>
+      <MainPage/>
+		  <Footer/>
     </>
   )
 }

@@ -1,0 +1,27 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.card_item {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    width: 300px;
+}
+
+.card_item img {
+    height: 50%;
+    background-color: aqua;
+}
+
+.card_item_info {
+    height: 50%;
+}

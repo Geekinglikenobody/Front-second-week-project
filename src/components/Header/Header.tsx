@@ -33,7 +33,7 @@ const Header = forwardRef(() => {
           <div className={styles.leftMenu}>
             <ul>
               <li>
-                <Link to={"/"}>Купить</Link>
+                <Link to={"/cardsProperty"}>Купить</Link>
               </li>
               <li>
                 <Link to={"/"}>Снять</Link>

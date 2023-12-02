@@ -54,7 +54,11 @@ export const filterProperty = createAsyncThunk("filter/property", async({typePro
 const propertySlice = createSlice({
     name:"property",
     initialState,
-    reducers: {},
+    reducers: {
+        addFilteredProperty (state,action) {
+            state.filteredProperty = action.payload
+        }
+    },
     extraReducers: (builder) => {
         builder.addCase(fetchProperty.fulfilled, (state,action) => {
             state.property = action.payload
@@ -68,4 +72,5 @@ const propertySlice = createSlice({
     }
 }) 
 
+export const {addFilteredProperty} = propertySlice.actions 
 export default propertySlice.reducer

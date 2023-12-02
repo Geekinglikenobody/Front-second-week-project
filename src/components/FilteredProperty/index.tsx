@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProperty, filterProperty } from "../../features/propertySlice";
+import { addFilteredProperty, fetchProperty, filterProperty } from "../../features/propertySlice";
 import styles from "./filterProperty.module.css"
+import CardsProperty from "../CardsProperty";
+import { Link, useNavigate } from "react-router-dom";
 
 const FilteredProperty = () => {
     const dispatch = useDispatch()
-    const [typeProperty, setTypeProperty] = useState("")
-    const [rooms, setRooms] = useState("")
+    const navigate = useNavigate()
+    const [typeProperty, setTypeProperty] = useState("Квартира")
+    const [rooms, setRooms] = useState("1")
     const [minPrice, setMinPrice] = useState("Цена от")
     const [maxPrice, setMaxPrice] = useState("Цена до")
-console.log(typeProperty);
-
-    const [filteredProperty, setFilteredProperty] = useState([])
-    console.log(maxPrice);
     
+    const [filteredProperty, setFilteredProperty] = useState([])
+    
+    dispatch(addFilteredProperty(filteredProperty))
     const handleSetTypeProperty = (e) => {
         setTypeProperty(e.target.value)
     }
@@ -29,12 +31,14 @@ console.log(typeProperty);
         setMaxPrice(e.target.value)
     }
     const property = useSelector(state => state.property.property)
+    
     const handleFilter = () => {
-        const filter = property?.filter((item => {        
+        const filter = property?.filter((item => {       
             if(item.typeProperty === typeProperty && item.rooms === rooms && item.price >= minPrice && item.price <= maxPrice) {
                 return true
             }
         }))
+        
         setFilteredProperty(filter || [])
       }
     
@@ -42,9 +46,9 @@ console.log(typeProperty);
         dispatch(fetchProperty())
     }, [dispatch])
 
-    // const filtered = useSelector(state => state.property.property)
-    // console.log(filtered);
-    
+    if(filteredProperty.length > 0) {
+      navigate("/cardsProperty")
+    }
  
     return (
       <>
@@ -104,10 +108,11 @@ console.log(typeProperty);
     </div>
       </div>
       <div className={styles.form_item}>
-       <button onClick={handleFilter}>Найти</button>
+      <button onClick={handleFilter}>Найти</button>
+      {/* <Link to={"/cardsProperty"} onClick={handleFilter}>Найти</Link> */}
       </div>
     <div>
-      {filteredProperty.map(item => <div>dawdwadwad: {item._id}</div>)}
+      {/* {filteredProperty.map((item) => <div className={styles.filter}>dawdwadwad: {item._id}</div>)} */}
     </div>
       </>
   );

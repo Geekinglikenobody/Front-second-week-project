@@ -10,7 +10,6 @@ font-family: "Gill Sans", sans-serif;
 .navig1{
     width: 100%;
 
-
   padding-top: 20px;
 }
 .navig2{
@@ -21,6 +20,9 @@ font-size: 20px;
 cursor: pointer;
 align-items: center;
 border: 1px solid rgb(240, 164, 164);
+}
+li span{
+    color: black;
 }
 .images{
     margin-top: 20px;
