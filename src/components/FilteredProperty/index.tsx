@@ -49,41 +49,36 @@ console.log(typeProperty);
     return (
       <>
     <div className={styles.form}>
-      <div className={styles.form_items}>
       <div className={styles.form_item}>
-        <div>
-          Type:
-        </div>
-        <div className={styles.form_group}>
+        <h3>
+          Тип жилья:
+        </h3>
           <div className={styles.select_wrapper}>
             <select className={styles.select} name="type" id="type-select" value={typeProperty} onChange={handleSetTypeProperty}>
               <option value="Квартира" selected>Квартира</option>
               <option value="Дома">Дома</option>
             </select>
           </div>
-        </div>
       </div>
 
       <div className={styles.form_item}>
-        <div>
-          Rooms:
-        </div>
-        <div className={styles.form_group}>
+        <h3>
+          Количество комнат:
+        </h3>
           <div className={styles.select_wrapper}>
-            <select className={styles.select} name="type" id="type-select" value={rooms} onChange={handleSetRooms}>
+            <select  className={styles.select} name="type" id="type-select" value={rooms} onChange={handleSetRooms}>
               <option value="1" selected>1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
             </select>
           </div>
-        </div>
       </div>
 
       <div className={styles.form_item}>
-        <div>
-          Min Price:
-        </div>
+        <h3>
+          Минимальная цена:
+        </h3>
         <input
           type="number"
           name="minPrice"
@@ -95,9 +90,9 @@ console.log(typeProperty);
       </div>
 
       <div className={styles.form_item}>
-        <div>
-          Max Price:
-        </div>
+        <h3>
+          Максимальная цена:
+        </h3>
         <input
           type="number"
           name="maxPrice"
@@ -106,10 +101,11 @@ console.log(typeProperty);
           onChange={handleSetMaxPrice}
           autocomplete="off"
           required/>
+    </div>
       </div>
-      <button onClick={handleFilter}>Filter</button>
-    </div>
-    </div>
+      <div className={styles.form_item}>
+       <button onClick={handleFilter}>Найти</button>
+      </div>
     <div>
       {filteredProperty.map(item => <div>dawdwadwad: {item._id}</div>)}
     </div>
