@@ -6,7 +6,12 @@ import { fetchProperty } from '../../features/propertySlice';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Flickity from "react-flickity-component"
+import "./flickity.css"
 
+const flickityOptions = {
+    initialIndex:2
+}
 
 const CardsProperty = () => {
     const dispatch = useDispatch()
@@ -38,8 +43,6 @@ const CardsProperty = () => {
                         ))}
 
                     </Slider>
-                {/* <img src={item.img[0]} alt="" /> */}
-
                 <div className={styles.card_item_info}>
                     <div>{item.typeProperty}</div>
                     <div>{item.price}</div>
