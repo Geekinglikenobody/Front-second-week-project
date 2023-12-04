@@ -12,10 +12,15 @@ const FilteredProperty = () => {
     const [rooms, setRooms] = useState("1")
     const [minPrice, setMinPrice] = useState("Цена от")
     const [maxPrice, setMaxPrice] = useState("Цена до")
+    const [typeSell, setTypeSell] = useState("Купить")
     
     const [filteredProperty, setFilteredProperty] = useState([])
     
     dispatch(addFilteredProperty(filteredProperty))
+
+    const handleSetTypeSell = (e) => {
+      setTypeSell(e.target.value)
+    }
     const handleSetTypeProperty = (e) => {
         setTypeProperty(e.target.value)
     }
@@ -31,10 +36,11 @@ const FilteredProperty = () => {
         setMaxPrice(e.target.value)
     }
     const property = useSelector(state => state.property.property)
+    console.log(filteredProperty);
     
     const handleFilter = () => {
         const filter = property?.filter((item => {       
-            if(item.typeProperty === typeProperty && item.rooms === rooms && item.price >= minPrice && item.price <= maxPrice) {
+            if(item.typeSell === typeSell && item.typeProperty === typeProperty && item.rooms === rooms && item.price >= minPrice && item.price <= maxPrice) {
                 return true
             }
         }))
@@ -49,10 +55,23 @@ const FilteredProperty = () => {
     if(filteredProperty.length > 0) {
       navigate("/cardsProperty")
     }
+
+
  
     return (
       <>
     <div className={styles.form}>
+    <div className={styles.form_item}>
+        <h3>
+          Категория
+        </h3>
+          <div className={styles.select_wrapper}>
+            <select className={styles.select} name="type" id="type-select" value={typeSell} onChange={handleSetTypeSell}>
+              <option value="Купить" selected>Купить</option>
+              <option value="Снять">Снять</option>
+            </select>
+          </div>
+      </div>
       <div className={styles.form_item}>
         <h3>
           Тип жилья:
@@ -60,7 +79,7 @@ const FilteredProperty = () => {
           <div className={styles.select_wrapper}>
             <select className={styles.select} name="type" id="type-select" value={typeProperty} onChange={handleSetTypeProperty}>
               <option value="Квартира" selected>Квартира</option>
-              <option value="Дома">Дома</option>
+              <option value="Дом">Дом</option>
             </select>
           </div>
       </div>
@@ -75,6 +94,7 @@ const FilteredProperty = () => {
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
+              <option value="5">5</option>
             </select>
           </div>
       </div>

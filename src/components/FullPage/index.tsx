@@ -13,7 +13,6 @@ export const FullPage = () => {
     }
   }))
 
-  console.log(property);
   
   return (
     <div className={style.wrapper1}>
