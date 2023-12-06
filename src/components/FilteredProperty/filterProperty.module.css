@@ -20,6 +20,13 @@
   }
 }
 
+.formWrapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .form_item {
   padding: 5px;
   width: 30%;
@@ -39,13 +46,26 @@
   border: none;
 }
 .form_item button {
-  width: 70%;
-  border-radius: 10px;
+  opacity: 0.9;
+  color: #d7cfcf;
+  background-color: #3d1a5e;
+  font-family: serif;
+  height: 50px;
+  width: 64%;
+  border-radius: 20px;
   /* outline: none; */
   border: none;
   font-size: 30px;
+  transition: all 0.5s ease;
+
   &:hover {
+    opacity: 1;
+    color: #ffffff;
+    filter: drop-shadow(0px 0.7px 1px black);
     cursor: pointer;
+  }
+  &:active {
+    filter: blur(0.4px);
   }
 }
 .select {
@@ -114,5 +134,12 @@ input[type="number"] {
 }
 
 .filter {
-    color: aliceblue;
+  color: aliceblue;
+}
+#description {
+  font-size: 230%;
+  color: snow;
+  text-align: center;
+  filter: drop-shadow(2px 4px 17px black);
+  margin-top: 5%;
 }
