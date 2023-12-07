@@ -1,0 +1,103 @@
+.mainDiv {
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  height: calc(110vh - 64px);
+  background-image: url("https://wallbox.ru/wallpapers/main2/201706/gorod-arhitektura-zdania-city-perspektiva-vecernij.jpg");
+  background-position: top;
+  background-size: cover;
+  filter: drop-shadow(2px 2px 25px black);
+}
+.secondMainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.secondViev {
+  display: flex;
+  justify-content: center;
+  background: #0c0624;
+}
+.welcomeText h1 {
+  height: 175px;
+  font-size: 70px;
+  color: white;
+  text-align: center;
+}
+
+.cardsOfItems {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 10px;
+}
+.cardOfItem {
+  width: calc(50% - 20px);
+  padding: 10px;
+  border: 1px solid #131017;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  transition: 1s;
+  box-shadow: 0px 0px 20px 0px #1f1d4a;
+}
+.cardOfItem:hover {
+  box-shadow: inset 0px 0px 20px 9px #1f1d4a;
+  transform: scale(1.01);
+}
+.cardOfItem article {
+  display: flex;
+  overflow-x: auto;
+}
+.cardOfItem article::-webkit-scrollbar {
+  display: none;
+}
+.cardOfItem img {
+  padding: 5px;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  flex: 0 0 auto;
+  width: 45%;
+  height: 30vh;
+  &:hover {
+    box-shadow: inset 0px 0px 20px 0px #484756;
+  }
+}
+.cardOfItem h3,
+.cardOfItem h4,
+.cardOfItem h5 {
+  font-family: serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.discription {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.discription div {
+	gap: 10px;
+}
+#sale {
+  font-size: 30px;
+  color:bisque;
+  font-family: fantasy;
+}
+#price {
+  color: white;
+  font-size: 22px;
+  font-family: monospace;
+}
+#mainText {
+  filter: drop-shadow(2px 4px 6px black);
+}

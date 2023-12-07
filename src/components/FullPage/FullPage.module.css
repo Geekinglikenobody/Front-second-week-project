@@ -1,0 +1,287 @@
+
+.wrapper1{
+font-family: "Gill Sans", sans-serif;
+
+}
+.wrapper2{
+    margin-left: 100px;
+
+}
+.navig1{
+    width: 100%;
+
+  padding-top: 20px;
+}
+.navig2{
+display: flex;
+justify-content: space-around;
+list-style-type: none;
+font-size: 20px;
+cursor: pointer;
+align-items: center;
+border: 1px solid rgb(240, 164, 164);
+}
+li span{
+    color: black;
+}
+.images{
+    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+}
+.img1{
+   width: 600px;
+   padding-left: 10px;
+}
+.img2{
+    width: 290px;
+}
+.img3{
+    width: 290px;
+    padding-top: 8px;
+
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+  
+}
+
+.text{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+ 
+}
+.text2{
+    font-size: 16px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.details{
+    padding: 20px;
+    width: 880px;
+    margin-top: 20px;
+    margin-left: 50px;
+   border: 1px solid black;
+}
+a{
+    text-decoration: none;
+    color: rgb(6, 6, 255);
+}
+.txtPrice{
+  font-size: 12px;
+    padding: 10px;
+    color: rgb(3, 139, 3);
+    border: 1px solid #a0f8a0;
+    background: #98ff98;
+    border-radius: 20px;
+}
+
+.button1{
+    margin-top: 20px;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button2{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button3 img{
+    padding: 7px 6px 5px 6px;
+width: 30px;
+}
+.button3{
+    margin-left: 20px;
+    position: absolute;
+    bottom: 47px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button4 img{
+    width: 30px;
+    padding: 7px 6px 5px 6px;
+}
+.button4{
+    margin-left: 60px;
+    position: absolute;
+    bottom: 47px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.priceForBuyer{
+    margin-left: 310px;
+   color: grey;
+}
+.admin{
+    width: 200px;
+    border: 1px solid black;
+margin-left: 150px;
+border-radius: 50px;
+}
+.avatar{
+    margin-left: 48px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100px; 
+    border-radius: 100px;
+}
+.adminName{
+    margin-left: 30px;
+}
+.adminNumber{
+    margin-left: 30px;
+}
+.adminButtons{
+   align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+ margin-left: 10px;
+}
+.sendMessageForAdmin{
+    align-items: center;
+    width: 150px;
+    height: 30px;
+margin-bottom: 30px;
+border: 1px solid rgb(254, 110, 110);
+border-radius: 10px;
+color: white;
+background-color: rgb(241, 108, 108);
+cursor: pointer;
+}
+.toBook{
+     width: 150px;
+     height: 30px;
+     align-items: center;
+  border: 1px solid rgb(26, 26, 255);
+  cursor: pointer;
+  background-color:  rgb(149, 182, 252);
+  color: rgb(0, 85, 255);
+  border-radius: 10px;
+}
+.lk{
+    padding: 20px;
+    width: 880px;
+    margin-top: 20px;
+margin-left: 50px;
+border: 1px solid black;
+
+}
+.textLk{
+    font-size: 14px;
+    color: grey;
+    margin-top: 20px;
+}
+.lkText{
+    font-size: 20px;
+}
+.signInLk{
+ padding: 10px;
+ margin-top: 20px;
+border-radius: 50px;
+border: 1px solid rgb(26, 26, 255);
+background-color:  rgb(149, 182, 252);
+cursor: pointer;
+color: rgb(0, 85, 255);
+}
+.discription{
+    width: 880px;
+    margin-left: 50px;
+ box-sizing: border-box;
+ margin-top: 20px;
+ border: 1px solid black;
+ padding: 20px;
+
+}
+.discript{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.views img{
+width: 20px;
+}
+.views{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    color: gray;
+    font-size: 14px;
+}
+.textDiscription{
+  
+}
+.text_specifications{
+   
+    font-size: 24px;
+    margin-bottom: 20px;
+    
+}
+.specifications{
+    margin-left: 50px;;
+    width: 880px;
+ box-sizing: border-box;
+ margin-top: 20px;
+ border: 1px solid black;
+ padding: 20px;
+}
+.basic_item{
+    display: flex;
+    justify-content: space-between;
+color: gray;
+}
+.text_basic{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.text_flat{
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.flat_item{
+    display: flex;
+    justify-content: space-between;
+color: gray;
+}
+.the_apartment_remains_for_sale{
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.of_home{
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.yard{
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.free_legal_protection{
+    margin-top: 20px;
+    font-size: 18px;
+  margin-top: 20px;
+}
+.mini_txt{
+    font-size: 14px;
+   margin-top: 10px;
+   margin-bottom: 20px;
+}
+.yes{
+  margin-top: 15px;
+}
