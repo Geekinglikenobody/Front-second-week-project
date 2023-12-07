@@ -20,7 +20,7 @@ const CardsProperty = () => {
     }, [])
     const filteredPropertystate = useSelector(state => state.property.filteredProperty) 
     const stateProperty = useSelector(state => state.property.property)
-    
+    const hash = "i" 
 
     const settings = {
         dots: true,
@@ -36,11 +36,17 @@ const CardsProperty = () => {
             {stateProperty.map(item => 
             <div className={styles.card_item}>
                     <Slider {...settings}>
-                    {item.img.map(res => (
+
+                    {item.img.map(res => {
+                        console.log(hash , res[0])
+                       return (
                         <div className={styles.image}>
-                            <img src={res} alt="" />
+                            {hash === res[0] ? <img src={`http://localhost:3030/${res}`} alt="" />:<img src={res} alt="" />}
+                            {/* <img src={res} alt="" /> */}
                         </div>
-                        ))}
+                        
+                       )
+    })}
 
                     </Slider>
                 <div className={styles.card_item_info}>
