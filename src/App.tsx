@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import socketIO from "socket.io-client"
 import FormChat from './components/FormChat'
 import ChatPage from './components/Chat'
+import Sell from './components/Sell'
 
 const socket = socketIO.connect("http://localhost:3030")
 
@@ -31,6 +32,7 @@ function App() {
       <Route path='/fullpage/:id' element={<FullPage/>}/>
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/signin" element={<SingIn/>}/>
+      <Route path="/sell" element={<Sell/>}/>
       <Route path="/formChat" element={<FormChat socket={socket}/>}/>
       <Route path="/chat" element={<ChatPage socket={socket}/>}/>
     </Routes>
