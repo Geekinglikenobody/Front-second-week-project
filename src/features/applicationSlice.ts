@@ -20,7 +20,7 @@ export const authSingUp = createAsyncThunk(
             formData.append('login', login)
             formData.append('password', password)
 
-            const res = await fetch("http://localhost:3001/registUs/", {
+            const res = await fetch("http://localhost:3030/registUs/", {
                 method: "POST",
                 body: formData
             })
@@ -42,7 +42,7 @@ export const authSingIn = createAsyncThunk(
     "auth/singIn",
     async({login, password}, thunkAPI) => {
         try {
-            const res = await fetch("http://localhost:3001/login/", {
+            const res = await fetch("http://localhost:3030/login/", {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json",
@@ -65,13 +65,13 @@ export const getUser = createAsyncThunk(
     "image/fetch",
     async(_,thunkAPI)=> {
         try {
-            const res = await fetch(`http://localhost:3001/user`, {
+            const res = await fetch(`http://localhost:3030/user`, {
                 method: 'GET',
                 headers: {Authorization: `Bearer ${thunkAPI.getState().application.token}`}
             })
-            console.log(img);
             
             const img = await res.json()
+            console.log(img);
             return img
         } catch (error) {
             thunkAPI.rejectWithValue(error.message)
