@@ -12,6 +12,8 @@ const Header = forwardRef(() => {
   const dispatch = useDispatch();
   const token = useSelector((state) => state.application.token);
   const user = useSelector((state) => state.application.user);
+  console.log(user);
+  
   const handleClose = () => {
     dispatch(exit());
   };
@@ -66,8 +68,7 @@ const Header = forwardRef(() => {
                   <img
                     src={`http://localhost:3030/${user.avatar}`}
                     alt=""
-                    width={50}
-                    height={50}
+                    className={styles.imageUser}
                   />
                 </li>
                 <li>

@@ -8,13 +8,20 @@ import SignUp from './components/SignUp'
 import SingIn from './components/SignIn'
 import { useEffect } from 'react'
 import { getUser } from './features/applicationSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import socketIO from "socket.io-client"
+import FormChat from './components/FormChat'
+import ChatPage from './components/Chat'
+
+const socket = socketIO.connect("http://localhost:3030")
 
 function App() {
   const dispatch = useDispatch()
+  const token = useSelector(state => state.application.token)
+
   useEffect(() => {
     dispatch(getUser())
-  }, [dispatch])
+  }, [dispatch, token])
 	return (
 		<>
     <Header/>
@@ -24,6 +31,8 @@ function App() {
       <Route path='/fullpage/:id' element={<FullPage/>}/>
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/signin" element={<SingIn/>}/>
+      <Route path="/formChat" element={<FormChat socket={socket}/>}/>
+      <Route path="/chat" element={<ChatPage socket={socket}/>}/>
     </Routes>
 		</>
 	)
