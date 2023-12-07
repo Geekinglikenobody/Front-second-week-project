@@ -5,20 +5,13 @@
   box-sizing: border-box;
 }
 
-header {
+.mainDiv header {
   display: flex;
   align-items: center;
   justify-content: space-around;
   filter: drop-shadow(1px 2px 5px black);
 }
-ul {
-  display: flex;
-  font-size: 22px;
-}
-ul li {
-  list-style-type: none;
-  color: white;
-}
+
 .mainDiv {
   /* background-color: rgb(18, 20, 64); */
   background: linear-gradient(
@@ -32,13 +25,27 @@ ul li {
 }
 .leftMenu ul {
   gap: 15px;
+  display: flex;
+  font-size: 22px;
 }
 .rightMenu ul {
   gap: 15px;
+  display: flex;
+  font-size: 22px;
 }
-a {
+.rightMenu a {
   color: rgb(255, 255, 255);
   text-decoration: none;
+  &:hover {
+    color: hsl(222, 23%, 78%);
+  }
+}
+.leftMenu a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  &:hover {
+    color: hsl(222, 23%, 78%);
+  }
 }
 
 .btnSearch {
@@ -64,20 +71,6 @@ a {
   box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
   transition: 100ms;
 }
-a:hover {
-  color: hsl(222, 23%, 78%);
-}
-
-input {
-  border-radius: 15px;
-  outline: none;
-  padding-left: 10px;
-  border-radius: 50px;
-  width: 300px;
-  height: 30px;
-  width: 665px;
-  border: none;
-}
 
 .form {
   padding: 5px;
@@ -88,7 +81,9 @@ input {
 .input {
   background-color: transparent;
 }
-
+.logoPlace {
+  margin-right: -6%;
+}
 .logoPlace img {
   height: 70px;
   &:hover {
