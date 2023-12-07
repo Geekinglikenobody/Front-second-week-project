@@ -133,13 +133,13 @@ const Header = forwardRef(() => {
           <div className={styles.rightMenu}>
             <ul>
               <li>
-                <Link to={"/signup"}>Войти</Link>
+                <Link to={"/signup"}>Регистрация</Link>
+              </li>
+              <li>
+                <Link to={"/signin"}>Войти</Link>
               </li>
               <li>
                 <Link to={"/"}>Помощь</Link>
-              </li>
-              <li>
-                <Link to={"/"}>Ипотека</Link>
               </li>
               <li className={styles.lastLi}>
                 <Link to={"/"}>Навостройки</Link>
