@@ -33,40 +33,43 @@ const CardsProperty = () => {
 
   if (filteredPropertystate.length === 0) {
     return (
-        <div className={styles.wrapper}>
-      <div className={styles.card}>
-        {stateProperty.map((item) => (
-          <div className={styles.card_item}>
-            <Slider {...settings}>
-              {item.img.map((res) => (
-                <div className={styles.image}>
-                  <img src={res} alt="" />
+      <div className={styles.wrapper}>
+        <div className={styles.card}>
+          {stateProperty.map((item) => (
+            <div className={styles.card_item}>
+              <Slider {...settings}>
+                {item.img.map((res) => (
+                  <div className={styles.image}>
+                    <img src={res} alt="" />
+                  </div>
+                ))}
+              </Slider>
+              <div className={styles.card_item_info}>
+                <div className={styles.line_1}>
+                  <div className={styles.namePro}>{item.address}</div>
+                  <div>
+                    <img src={logoImg} height={35} width={35} alt="" />
+                  </div>
                 </div>
-              ))}
-            </Slider>
-            <div className={styles.card_item_info}>
-              <div className={styles.line_1}>
-                <div className={styles.namePro}>{item.address}</div>
-                <div>
-                  <img src={logoImg} height={35} width={35} alt="" />
+                <div className={styles.tip}>
+                  Тип недвижимости:&nbsp;
+                  <span className={styles.typeProperty}>
+                    {item.typeProperty}
+                  </span>
                 </div>
-              </div>
-              <div className={styles.tip}>
-                Тип недвижимости: {item.typeProperty}
-              </div>
-              <div className={styles.quadrature}>
-                Площадь: {item.quadrature} м<sup>2</sup>
-              </div>
-              <div className={styles.floor}>Этаж: {item.floor}</div>
-              <div className={styles.price}>{item.price} млн руб</div>
+                <div className={styles.quadrature}>
+                  Площадь: <span className={styles.quadrature2}>{item.quadrature} м<sup>2</sup></span>
+                </div>
+                <div className={styles.floor}>Этаж: <span className={styles.floor2}>{item.floor}</span></div>
+                <div className={styles.price}>{item.price} МЛН. РУБ.</div>
 
-              {/* <Link to={`/fullpage/${item._id}`}>
+                {/* <Link to={`/fullpage/${item._id}`}>
                 <button className={styles.watchBtn}>Посмотреть</button>
               </Link> */}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     );
   }

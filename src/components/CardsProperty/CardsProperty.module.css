@@ -65,8 +65,8 @@ img {
 }
 
 .wrapper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
   background-color: #04042d;
 }
 
@@ -93,7 +93,7 @@ img {
   overflow: hidden;
 }
 .price {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   padding-top: 15px;
   color: white;
@@ -105,4 +105,19 @@ img {
   color: white;
   font-family: "Mont";
   font-weight: bold;
+}
+.typeProperty {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.quadrature2 {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.floor2 {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
