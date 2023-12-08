@@ -34,7 +34,7 @@ export const FullPage = () => {
   });
   return (
     <div className={style.wrapper1}>
-      <div className={style.navig1}>
+      {/* <div className={style.navig1}>
         <ul className={style.navig2}>
           <li>
             <span>Галерея</span>
@@ -52,7 +52,7 @@ export const FullPage = () => {
             <span>Похожие квартиры</span>
           </li>
         </ul>
-      </div>
+      </div> */}
       <div className={style.wrapper3}>
         <div className={style.images}>
           {filteredDom.map((item) => (
