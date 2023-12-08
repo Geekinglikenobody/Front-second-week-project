@@ -29,7 +29,7 @@ function App() {
     <Header/>
     <Routes>
 			<Route path="/" element={<Home/>}/>
-      <Route path="/cardsProperty" element={<CardsProperty/>} />
+      <Route path="/cardsProperty/:name" element={<CardsProperty/>} />
       <Route path='/fullpage/:id' element={<FullPage/>}/>
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/signin" element={<SingIn/>}/>

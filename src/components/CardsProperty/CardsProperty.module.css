@@ -41,6 +41,9 @@ img {
   align-items: center;
   padding: 10px;
 }
+.tip:hover, .quadrature:hover, .namePro:hover,.floor:hover,.price:hover {
+    text-decoration: underline;
+  }
 .watchBtn {
   background-color: transparent;
   width: 100%;
@@ -105,4 +108,8 @@ img {
   color: white;
   font-family: "Mont";
   font-weight: bold;
+}
+
+.slick-dots li.slick-active button:before {
+    color: white;
 }
