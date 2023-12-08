@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./CardsProperty.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { fetchProperty } from "../../features/propertySlice";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -15,13 +15,23 @@ const flickityOptions = {
 
 const CardsProperty = () => {
   const dispatch = useDispatch();
+    const {name} = useParams()
+    console.log(name);
+    
+
   useEffect(() => {
     dispatch(fetchProperty());
   }, []);
   const filteredPropertystate = useSelector(
     (state) => state.property.filteredProperty
   );
-  const stateProperty = useSelector((state) => state.property.property);
+  const stateProperty = useSelector((state) => state.property.property.filter((item) => {
+    console.log(item)
+    
+    if(item.typeSell === name) {
+        return true
+    }
+  }));
 
   const settings = {
     dots: true,
@@ -45,6 +55,7 @@ const CardsProperty = () => {
               ))}
             </Slider>
             <div className={styles.card_item_info}>
+            <Link to={`/fullpage/${item._id}`}>
               <div className={styles.line_1}>
                 <div className={styles.namePro}>{item.address}</div>
                 <div>
@@ -59,10 +70,7 @@ const CardsProperty = () => {
               </div>
               <div className={styles.floor}>Этаж: {item.floor}</div>
               <div className={styles.price}>{item.price} млн руб</div>
-
-              {/* <Link to={`/fullpage/${item._id}`}>
-                <button className={styles.watchBtn}>Посмотреть</button>
-              </Link> */}
+            </Link>
             </div>
           </div>
         ))}
