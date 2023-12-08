@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router'
 import './App.css'
+
 import Home from './components/Home/Home'
 import { FullPage } from './components/FullPage'
 import Header from './components/Header/Header'
