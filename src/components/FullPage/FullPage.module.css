@@ -8,10 +8,11 @@
   font-family: 'TT Norms Pro', sans-serif;
 }
 .wrapper3 {
-  margin-top: 100px;
+  margin-top: 40px;
   margin-left: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .navig1 {
   width: 100%;
@@ -30,14 +31,15 @@ li span {
 }
 .images {
   width: 900px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
-
-.image {
-  display: flex;
+.image img{
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 10px; */
+  width: 900px;
+  height: 550px;
 }
 
 .text {
