@@ -68,7 +68,7 @@ const FilteredProperty = () => {
   }, [dispatch]);
 
   if (filteredProperty.length > 0) {
-    navigate("/cardsProperty");
+    navigate("/cardsProperty/Купить");
   }
 
   return (

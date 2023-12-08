@@ -16,8 +16,6 @@ const flickityOptions = {
 const CardsProperty = () => {
   const dispatch = useDispatch();
     const {name} = useParams()
-    console.log(name);
-    
 
   useEffect(() => {
     dispatch(fetchProperty());
@@ -25,6 +23,8 @@ const CardsProperty = () => {
   const filteredPropertystate = useSelector(
     (state) => state.property.filteredProperty
   );
+  console.log(filteredPropertystate);
+  
   const stateProperty = useSelector((state) => state.property.property.filter((item) => {
     console.log(item)
     
