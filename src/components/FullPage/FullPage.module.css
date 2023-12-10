@@ -2,6 +2,7 @@
   font-family: "Gill Sans", sans-serif;
 }
 .wrapper1 {  
+  width: 1600px;
   background-image: url("https://w.forfun.com/fetch/5b/5b8af025bee3bd3effb35a68d74afba5.jpeg");
   background-position: top;
   background-size: cover;
@@ -26,10 +27,9 @@
   cursor: pointer;
   align-items: center;
 }
-li span {
 
-}
 .images {
+  margin-left: 20px;
   width: 900px;
   /* margin-top: 40px; */
 }
@@ -39,19 +39,21 @@ li span {
   align-items: center;
   margin-left: 10px; */
   width: 900px;
-  height: 550px;
+  height: 490px;
 }
-
+.price{
+  color: white;
+  font-weight: 600;
+}
 .text {
   color: rgba(255, 255, 255, 0.907);
-  font-size: 22px;
+  font-size: 26px;
   display: flex;
   margin-bottom: 10px;
   justify-content: space-between;
 }
 .text2 {
-  font-size: 16px;
-  padding-bottom: 10px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.908);
   display: flex;
   justify-content: space-between;
@@ -62,21 +64,21 @@ li span {
   margin-top: 50px;
   border-radius: 20px;
   margin-left: 50px;
-  background-color: rgba(100, 110, 180, 0.2);
+  /* background-color: rgba(100, 110, 180, 0.2); */
+  background: #0000004d;
   border: 1px solid rgba(100, 109, 180, 0.368);
 }
 a {
   text-decoration: none;
-  font-size: 16px;
-  color: rgba(6, 6, 255, 0.424);
+  color: rgba(255, 255, 255, 0.908);
+  font-size: 20px;
 }
 .txtPrice {
   font-size: 13px;
-  padding: 12px;
+  padding: 15px;
  color: white;
  background-color: black;
   border-radius: 20px;
-
 }
 
 .button1 {
@@ -94,16 +96,18 @@ a {
 }
 .priceForBuyer {
   color: rgba(255, 255, 255, 0.908);
+  font-size: 20px;
 }
 .admin {
   
   width: 400px;
   height: 500px;
   border: 1px solid rgba(100, 109, 180, 0.368);
-margin-right: 100px;
+margin-right: 180px;
   border-radius: 50px;
   color: white;
-  background-color: rgba(100, 110, 180, 0.2);
+  /* background-color: rgba(100, 110, 180, 0.2); */
+  background: #0000004d;
 }
 .avatar {
   margin-left: 100px;
@@ -159,17 +163,18 @@ margin-right: 100px;
   width: 1370px;
   margin-top: 20px;
   margin-left: 50px;
-  background-color: rgba(100, 110, 180, 0.2);
+  /* background-color: rgba(100, 110, 180, 0.2); */
+  background: #0000004d;
       border-radius: 20px;
       border: 1px solid rgba(100, 109, 180, 0.368);
 }
 .textLk {
-  font-size: 16px;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.908);
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .lkText {
-  font-size: 22px;
+  font-size: 26px;
 }
 .signInLk {
   padding: 10px;
@@ -190,35 +195,27 @@ margin-right: 100px;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  background-color: rgba(100, 110, 180, 0.2);
+  /* background-color: rgba(100, 110, 180, 0.2); */
+  background: #0000004d;
     border: 1px solid rgba(100, 109, 180, 0.368);
   border-radius: 20px;
   padding: 20px;
 }
+.textDiscription{
+font-size: 22px;
+}
 .discript {
     color: rgba(255, 255, 255, 0.929);
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-.prosmotr {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-.views {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 30px;
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  margin-top: -20px;
+  font-size: 26px;
   margin-bottom: 10px;
 }
 
+
 .text_specifications {
+  display: flex;
+  justify-content: center;
   font-size: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: rgba(255, 255, 255, 0.908);
 }
 .specifications {
@@ -228,18 +225,19 @@ margin-right: 100px;
   margin-left: 50px;
   width: 1370px;
   box-sizing: border-box; 
-  background-color: rgba(100, 110, 180, 0.44);
+  background: #0000004d;
+  /* background-color: rgba(100, 110, 180, 0.44); */
     margin-top: 20px;
     border: 1px solid rgba(100, 109, 180, 0.368);
   border-radius: 20px;
-  padding: 20px 20px 20px 200px;
+  padding: 20px 20px 20px 150px;
 }
 .basic_item {
   display: flex;
-  margin-right: 200px;
+  margin-right: 150px;
   justify-content: space-between;
   color: rgba(255, 255, 255, 0.908);
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 5px;
 }
 
@@ -255,26 +253,26 @@ margin-right: 100px;
 .flat_item {
   display: flex;
   justify-content: space-between;
-  margin-right: 200px;
+  margin-right: 150px;
   color: rgba(255, 255, 255, 0.908);
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 5px;
 
 }
 
 .the_apartment_remains_for_sale {
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 30px;
 }
 .of_home {
-  margin-top: 20px;
-  font-size: 22px;
+  margin-top: 22px;
+  font-size: 24px;
   margin-bottom: 30px;
 }
 .yard {
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 30px;
 }
 .free_legal_protection {
@@ -289,6 +287,6 @@ margin-right: 100px;
 }
 .yes {
   margin-top: 15px;
-  font-size: 18px;
+  font-size: 20px;
 
 }

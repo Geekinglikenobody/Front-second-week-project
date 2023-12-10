@@ -1,5 +1,5 @@
 import style from "../FullPage/FullPage.module.css";
-import prosmotr from "../../assets/prosmotr.png";
+// import prosmotr from "../../assets/prosmotr.png";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import image from "../../assets/image.jpg"
@@ -17,6 +17,7 @@ export const FullPage = () => {
       }
     })
   );
+  console.log(property)
   const { id } = useParams();
   const dispatch = useDispatch();
   const stateProperty = useSelector((state) => state.property.property);
@@ -31,7 +32,7 @@ export const FullPage = () => {
   };
   useEffect(() => {
     dispatch(fetchProperty());
-  });
+  },[dispatch]);
   return (
     <div className={style.wrapper1}>
       {/* <div className={style.navig1}>
@@ -55,7 +56,7 @@ export const FullPage = () => {
       </div> */}
       <div className={style.wrapper3}>
         <div className={style.images}>
-          {filteredDom.map((item) => (
+          {filteredDom?.map((item) => (
             <div className={style.card_item}>
               <Slider {...settings}>
                 {item.img.map((res) => (
@@ -73,26 +74,25 @@ export const FullPage = () => {
             src={image}
           />
           <div className={style.adminName}>Назиров Расул</div>
-          <div className={style.adminNumber}>☏ +7 928 727 07 77 </div>
+          <div className={style.adminNumber}>☏ +7 928 *** ** ** </div>
           <div className={style.adminButtons}>
             <button className={style.sendMessageForAdmin}>
               Написать специалисту
             </button>
-            <button className={style.toBook}>Забронировать</button>
+            <button className={style.toBook}>❤ <b>В избранное</b></button>
           </div>
         </div>
       </div>
       <div className={style.details}>
         <div className={style.text}>
-          <b>4-комн. квартира, 97м², 2/7 этаж</b>
+          <b>{property?.rooms} комнатная {property?.typeProperty}, {property?.quadrature}м², {property?.floor} этаж</b>
           <div>
-            <b>7 000 000 ₽</b>
+            <b className={style.price}>{property?.price} </b> млн руб
           </div>
         </div>
 
         <div className={style.text2}>
-          р-н 1 микрорайон, ул. Хаджи-Бикара Муталиева, 2а <br />
-          (0.2 км до центра)
+      {property?.address}
           <span className={style.txtPrice}>
             <b>Рыночная цена</b>
           </span>
@@ -124,19 +124,8 @@ export const FullPage = () => {
         <div className={style.discript}>
           <b>Описание</b>
         </div>
-        <div className={style.views}>
-          <img className={style.prosmotr} src={prosmotr} />
-          15 просмотров
-        </div>
         <div className={style.textDiscription}>
-          Добрый день! Представляем вашему вниманию четырёхкомнатную квартиру в
-          городе Магас, <br /> общей площадью 99,7 квадратных метров. Квартира
-          расположена на втором этаже пятиэтажного дома. <br />  Три спальни и одна
-          гостиная комната, совмещённый санитарный узел, два балкона, окна
-          выходят на обе стороны, <br />  проведён качественный ремонт. В шаговой
-          доступности вся необходимая для комфортной жизни инфраструктура.
-          <br /> Хороший район. Документы на руках.  Торг уместен. По всем вопросам
-          обращаться по номеру.
+        {property?.desc}
         </div>
       </div>
       <div className={style.specifications}>
@@ -151,28 +140,13 @@ export const FullPage = () => {
           </div>
           <div>
             <div className={style.basic_item}>
-              <span>Код объекта</span> <span>10244912</span>
+              <span>Общая площадь</span> <span>{property?.quadrature}м²</span>
             </div>
             <div className={style.basic_item}>
-              <span>Общая площадь</span> <span>99.7 м²</span>
+              <span>Ремонт</span> <span>{property?.typeRemont}</span>
             </div>
             <div className={style.basic_item}>
-              <span>Ремонт</span> <span>Косметический ремонт</span>
-            </div>
-            <div className={style.basic_item}>
-              <span>Год постройки</span> <span>2008</span>
-            </div>
-            <div className={style.basic_item}>
-              <span>Этаж/Этажность</span> <span>2 из 7</span>
-            </div>
-            <div className={style.basic_item}>
-              <span>Год постройки</span> <span>2008</span>
-            </div>
-            <div className={style.basic_item}>
-              <span>Стены</span> <span>Кирпичные</span>
-            </div>
-            <div className={style.basic_item}>
-              <span>Площадь кухни</span> <span>6 м²</span>
+              <span>Этаж/Этажность</span> <span>{property?.floor} этаж</span>
             </div>
           </div>
           <div>
@@ -180,25 +154,13 @@ export const FullPage = () => {
               <b>О квартире</b>
             </div>
             <div className={style.flat_item}>
-              <span>Комнатность</span> <span>4-комн.</span>
-            </div>
-            <div className={style.flat_item}>
-              <span>Высота потолков</span> <span>2.5 м</span>
-            </div>
-            <div className={style.flat_item}>
-              <span>Санузел</span> <span>Раздельный</span>
+              <span>Комнатность</span> <span>{property?.rooms}</span>
             </div>
             <div className={style.flat_item}>
               <span>Балкон</span> <span>Есть балкон</span>
             </div>
             <div className={style.flat_item}>
-              <span>Материал окон</span> <span>Пластиковые</span>
-            </div>
-            <div className={style.flat_item}>
-              <span>Солнечная сторона</span> <span>Часть окон</span>
-            </div>
-            <div className={style.flat_item}>
-              <span>Вид из окон</span> <span>Во двор</span>
+              <span>Вид из окон</span> <span>На красивейший пейзаж</span>
             </div>
           </div>
           <div>
@@ -206,16 +168,10 @@ export const FullPage = () => {
               <b>В квартире при продаже остается</b>
             </div>
             <div className={style.flat_item}>
-              <span>Домофон</span>
-            </div>
-            <div className={style.flat_item}>
               <span>Железная дверь</span>
             </div>
             <div className={style.flat_item}>
               <span>Кондиционер</span>
-            </div>
-            <div className={style.flat_item}>
-              <span>Счетчик воды</span>
             </div>
             <div className={style.flat_item}>
               <span>Подключённые сервисы</span>
@@ -232,8 +188,8 @@ export const FullPage = () => {
             <span>Пассажирский и грузовой</span>
           </div>
           <div className={style.flat_item}>
-            <span>Номер дома</span>
-            <span>2а</span>
+            <span>Адресс дома</span>
+            <span>{property?.address}</span>
           </div>
         </div>
         <div>
