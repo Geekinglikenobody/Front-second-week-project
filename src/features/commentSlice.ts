@@ -6,15 +6,18 @@ const initialState = {
 
 export const fetchComments = createAsyncThunk(
     "comments/fetch",
-    async(_,thunkAPI) => {
+    async(property,thunkAPI) => {
+        console.log(property)
+        
         try {
-            const res = await fetch("http://localhost:3001/comments", {
+            const res = await fetch(`http://localhost:3030/comments/${property}`, {
                 headers: {
                     "Content-Type":"application/json"
                 }
             })
 
             const comments = await res.json()
+            console.log(comments);
             
             return comments
             
@@ -24,15 +27,16 @@ export const fetchComments = createAsyncThunk(
     })
 export const addComments = createAsyncThunk(
     "addComments/fetch",
-    async({text,news,user},thunkAPI) => {
+    async({text,property,user},thunkAPI) => {
         
         try {
-            const res = await fetch("http://localhost:3001/comments", {
+            const res = await fetch("http://localhost:3030/comments", {
                 headers:{
-                    "Content-Type":"application/json"
+                    "Content-Type":"application/json",
+                    Authorization: `Bearer ${thunkAPI.getState().application.token}`
                 },
                 method: "POST",
-                body: JSON.stringify({text,newsId:news, userId: user})
+                body: JSON.stringify({text,propertyId:property, userId: user})
             })
             
             const date = await res.json()
@@ -47,8 +51,10 @@ export const addComments = createAsyncThunk(
 export const removeComments = createAsyncThunk(
     "removeComment/fetch",
     async(id,thunkAPI) => {
+        console.log(id);
+        
         try {
-            const res = await fetch(`http://localhost:3001/comments/${id}`, {
+            const res = await fetch(`http://localhost:3030/comments/${id}`, {
                 headers: {
                     "Content-Type":"application/json"
                 },
@@ -77,6 +83,10 @@ const commentSlice = createSlice({
             
         })
         builder.addCase(removeComments.fulfilled, (state,action) => {
+            console.log(action.payload);// здесь было "удалено" Ща постараюсь исправить если получится
+            // заработало 
+            
+            
             state.comments = state.comments.filter((item) => item._id !== action.payload._id)
          })
     },

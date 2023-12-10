@@ -14,6 +14,7 @@ import socketIO from "socket.io-client"
 import FormChat from './components/FormChat'
 import ChatPage from './components/Chat'
 import Sell from './components/Sell'
+import Favorite from './components/Favorite'
 
 const socket = socketIO.connect("http://localhost:3030")
 
@@ -34,6 +35,7 @@ function App() {
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/signin" element={<SingIn/>}/>
       <Route path="/sell" element={<Sell/>}/>
+      <Route path="favorite" element={<Favorite/>}/>
       <Route path="/formChat" element={<FormChat socket={socket}/>}/>
       <Route path="/chat" element={<ChatPage socket={socket}/>}/>
     </Routes>
