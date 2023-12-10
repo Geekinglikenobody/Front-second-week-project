@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./flickity.css";
 import logoImg from "../../assets/save.png";
+import { addPropertyInFavorite } from "../../features/favoriteSlice";
 
 const flickityOptions = {
   initialIndex: 2,
@@ -31,7 +32,8 @@ const CardsProperty = () => {
     if(item.typeSell === name) {
         return true
     }
-  }));
+  })
+  );
 
   const settings = {
     dots: true,
@@ -55,13 +57,13 @@ const CardsProperty = () => {
               ))}
             </Slider>
             <div className={styles.card_item_info}>
-            <Link to={`/fullpage/${item._id}`}>
               <div className={styles.line_1}>
                 <div className={styles.namePro}>{item.address}</div>
                 <div>
-                  <img src={logoImg} height={35} width={35} alt="" />
+                  <img  onClick={() => dispatch(addPropertyInFavorite(item._id))} src={logoImg} height={35} width={35} alt="" />
                 </div>
               </div>
+            <Link to={`/fullpage/${item._id}`}>
               <div className={styles.tip}>
                 Тип недвижимости: {item.typeProperty}
               </div>

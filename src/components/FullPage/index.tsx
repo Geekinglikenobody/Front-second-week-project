@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { useEffect } from "react";
 import { fetchProperty } from "../../features/propertySlice";
+import Comments from "../Comments";
 export const FullPage = () => {
   const selectProp = useParams();
 
@@ -31,28 +32,9 @@ export const FullPage = () => {
   };
   useEffect(() => {
     dispatch(fetchProperty());
-  });
+  }, [dispatch]);
   return (
     <div className={style.wrapper1}>
-      {/* <div className={style.navig1}>
-        <ul className={style.navig2}>
-          <li>
-            <span>Галерея</span>
-          </li>
-          <li>
-            <span>О квартире</span>
-          </li>
-          <li>
-            <span>Характеристики</span>
-          </li>
-          <li>
-            <span>Забронировать</span>
-          </li>
-          <li>
-            <span>Похожие квартиры</span>
-          </li>
-        </ul>
-      </div> */}
       <div className={style.wrapper3}>
         <div className={style.images}>
           {filteredDom.map((item) => (
@@ -64,14 +46,14 @@ export const FullPage = () => {
                   </div>
                 ))}
               </Slider>
-            </div>
-          ))}
+            </div>  
+        ))}
         </div>
         <div className={style.admin}>
           <img
             className={style.avatar}
             src={image}
-          />
+            />
           <div className={style.adminName}>Назиров Расул</div>
           <div className={style.adminNumber}>☏ +7 928 727 07 77 </div>
           <div className={style.adminButtons}>
@@ -82,6 +64,7 @@ export const FullPage = () => {
           </div>
         </div>
       </div>
+        
       <div className={style.details}>
         <div className={style.text}>
           <b>4-комн. квартира, 97м², 2/7 этаж</b>
@@ -139,6 +122,7 @@ export const FullPage = () => {
           обращаться по номеру.
         </div>
       </div>
+      <Comments property={property._id}/>
       <div className={style.specifications}>
         <div className={style.text_specifications}>
           {" "}
