@@ -113,3 +113,7 @@ img {
 .slick-dots li.slick-active button:before {
     color: white;
 }
+
+.trash_box {
+    color: white;
+}
