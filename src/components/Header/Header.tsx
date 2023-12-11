@@ -83,6 +83,11 @@ const Header = forwardRef(() => {
                   </Link>
                 </li>
                 <li>
+                  <Link to={"/favorite"}>
+                  Избранное
+                  </Link>
+                </li>
+                <li>
                   {user.admin ? (
                     <Link to={"/complains"}>
                       Заявки{<span>{complains.length}</span>}
