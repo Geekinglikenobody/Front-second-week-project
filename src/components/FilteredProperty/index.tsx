@@ -45,7 +45,7 @@ const FilteredProperty = () => {
     setMaxPrice(e.target.value);
   };
   const property = useSelector((state) => state.property.property);
-  console.log(filteredProperty);
+  // console.log(filteredProperty);
 
   const handleFilter = () => {
     const filter = property?.filter((item) => {

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 export const FullPage = () => {
   const selectProp = useParams()
-  console.log(selectProp.id);
+  // console.log(selectProp.id);
   
   const property = useSelector(state => state.property.property?.find((item) => {
     if(item._id === selectProp.id){

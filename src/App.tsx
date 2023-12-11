@@ -13,6 +13,8 @@ import socketIO from "socket.io-client"
 import FormChat from './components/FormChat'
 import ChatPage from './components/Chat'
 import Sell from './components/Sell'
+import Complaint from './components/Complaint/Index'
+import Help from './components/Help/Index'
 
 const socket = socketIO.connect("http://localhost:3030")
 
@@ -35,6 +37,8 @@ function App() {
       <Route path="/sell" element={<Sell/>}/>
       <Route path="/formChat" element={<FormChat socket={socket}/>}/>
       <Route path="/chat" element={<ChatPage socket={socket}/>}/>
+      <Route path="/complains" element={<Complaint/>}/>
+      <Route path="/help" element={<Help/>}/>
     </Routes>
 		</>
 	)
