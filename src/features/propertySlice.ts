@@ -33,22 +33,21 @@ export const addProperty = createAsyncThunk(
     },
     thunkAPI
   ) => {
-    console.log("dwdwdwdw",
-      typeSell,
-      address,
-      typeFloor,
-      rooms,
-      quadrature,
-      typeRemont,
-      price,
-      desc, images
-    );
+    // console.log("dwdwdwdw",
+    //   typeSell,
+    //   address,
+    //   typeFloor,
+    //   rooms,
+    //   quadrature,
+    //   typeRemont,
+    //   price,
+    //   desc, images
+    // );
 
     const formData = new FormData();
 
-    for(const img of images) {
-
-        formData.append("img", img);
+    for (const img of images) {
+      formData.append("img", img);
     }
     formData.append("typeSell", typeSell);
     formData.append("address", address);
@@ -59,7 +58,7 @@ export const addProperty = createAsyncThunk(
     formData.append("price", price);
     formData.append("desc", desc);
 
-    console.log(formData)
+    // console.log(formData)
 
     try {
       const res = await fetch("http://localhost:3030/property", {
@@ -68,7 +67,7 @@ export const addProperty = createAsyncThunk(
       });
 
       const property = await res.json();
-      console.log(property);
+      // console.log(property);
 
       return thunkAPI.fulfillWithValue(property);
     } catch (error) {
@@ -79,7 +78,7 @@ export const addProperty = createAsyncThunk(
 export const filterProperty = createAsyncThunk(
   "filter/property",
   async ({ typeProperty, rooms, minPrice, maxPrice }, thunkAPI) => {
-    console.log(typeProperty, rooms, minPrice, maxPrice);
+    // console.log(typeProperty, rooms, minPrice, maxPrice);
 
     try {
       const res = await fetch("http://localhost:3030/property/filter", {
@@ -90,7 +89,7 @@ export const filterProperty = createAsyncThunk(
         body: JSON.stringify({ typeProperty, rooms, minPrice, maxPrice }),
       });
       const date = await res.json();
-      console.log(date);
+      // console.log(date);
 
       return thunkAPI.fulfillWithValue(date);
     } catch (error) {

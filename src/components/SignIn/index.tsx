@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "../SignIn/SignIn.module.scss";
 import { motion } from "framer-motion";
 const SingIn = () => {
-  console.log(styles);
+  // console.log(styles);
 
   const singingIn = useSelector((state) => state.application.singingIn);
   const dispatch = useDispatch();

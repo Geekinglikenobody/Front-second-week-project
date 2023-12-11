@@ -25,7 +25,7 @@ const Sell = () => {
   const [desc, setDesc] = useState("");
   const [images, setImages] = useState([]);
 
-  console.log("images", images);
+  // console.log("images", images);
 
   const handleAddAnnounc = () => {
     dispatch(

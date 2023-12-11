@@ -1,5 +1,6 @@
 // import React from "react";
 import styles from "../Header/Header.module.css";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/Logo.svg";
 // import logotip from "../../assets/log4.png";
 import { motion } from "framer-motion";
@@ -7,13 +8,20 @@ import { forwardRef, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { exit } from "../../features/applicationSlice";
+import { fetchComplains } from "../../features/complainSlice";
 
 const Header = forwardRef(() => {
   const dispatch = useDispatch();
   const token = useSelector((state) => state.application.token);
   const user = useSelector((state) => state.application.user);
-  console.log(user);
-  
+  const complains = useSelector((state) => state.complaintsReducer.complains);
+
+  useEffect(() => {
+    dispatch(fetchComplains());
+  }, []);
+
+  const [plu, setPlu] = useState(false);
+
   const handleClose = () => {
     dispatch(exit());
   };
@@ -64,26 +72,29 @@ const Header = forwardRef(() => {
             <div className={styles.rightMenu}>
               <ul>
                 <li>
-                  <Link to={"/signup"}>{user.login}</Link>
                   <img
                     src={`http://localhost:3030/${user.avatar}`}
                     alt=""
                     className={styles.imageUser}
+                    onClick={() => setPlu(!plu)}
                   />
+                  <Link id={styles.userName} to={"/"}>
+                    {user.login}
+                  </Link>
+                </li>
+                <li>
+                  {user.admin ? (
+                    <Link to={"/complains"}>
+                      Заявки{<span>{complains.length}</span>}
+                    </Link>
+                  ) : (
+                    <Link to={"/help"}>Помощь</Link>
+                  )}
                 </li>
                 <li>
                   <Link to={"/"} onClick={handleClose}>
                     Выйти
                   </Link>
-                </li>
-                <li>
-                  <Link to={"/"}>Помощь</Link>
-                </li>
-                <li>
-                  <Link to={"/"}>Ипотека</Link>
-                </li>
-                <li className={styles.lastLi}>
-                  <Link to={"/"}>Навостройки</Link>
                 </li>
               </ul>
             </div>

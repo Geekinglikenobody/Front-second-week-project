@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { fetchProperty } from "../../features/propertySlice";
 import Comments from "../Comments";
 export const FullPage = () => {
-  const selectProp = useParams();
+const selectProp = useParams();
 
   const property = useSelector((state) =>
     state.property.property?.find((item) => {
