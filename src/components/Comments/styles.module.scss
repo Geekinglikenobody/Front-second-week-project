@@ -7,7 +7,10 @@
     width: 100%;
     max-height: 415px;
     overflow: auto;
-    background-color: #FFE4E1;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.908);
+    border: 1px solid rgba(100, 109, 180, 0.368);
+    background-color:rgba(100, 109, 180, 0.159);
     margin-left: auto;
     span {
         font-size: 22px;
@@ -52,12 +55,13 @@
         button {
             background-color: transparent;
             border-radius: 50%;
-            border: 2px solid firebrick;
+            border: none;
             width: 22px;
             height: 22px;
-            color: firebrick;
+            overflow:hidden;
+            color: rgb(255, 255, 255);
             margin-left: auto;
-
+font-size: 24px;
         }
 
         button:hover {

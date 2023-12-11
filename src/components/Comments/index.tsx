@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles.module.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { addComments, fetchComments, removeComments } from "../../features/commentSlice";
-
+import send from "../../assets/send.png"
 const Comments = ({property}) => {
     const dispatch = useDispatch();
     const user = useSelector(state => state.application.user._id)
@@ -50,7 +50,8 @@ const Comments = ({property}) => {
             <button
               className={text === "" ? styles.send_btn : styles.send_btn_on}
             >
-              <svg
+              <img className={styles.send_icon} src={send} alt="" />
+              {/* <svg
                 className={styles.send_icon}
                 xmlns="http://www.w3.org/2000/svg"
                 width="800px"
@@ -65,7 +66,7 @@ const Comments = ({property}) => {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
-              </svg>
+              </svg> */}
             </button>
           </div>
         </form>
