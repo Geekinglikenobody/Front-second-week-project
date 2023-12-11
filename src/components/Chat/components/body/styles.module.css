@@ -1,56 +1,57 @@
 .header {
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 20px;
-    border-bottom: 1px solid #bfbdbd;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color:     310062;
+  border-bottom: 1px solid black;
+  overflow: hidden;
 }
 
 .btn {
-    padding: 10px ;
-    width: 150px;
-    border: none;
-    outline: none;
-    background-color: #ff0000;
-    cursor: pointer;
-    color: white;
+  padding: 10px;
+  width: 150px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: #ff0000;
+  cursor: pointer;
+  color: white;
 }
 
 .container {
-    height: 80vh;
-    background-color: #fff;
-    padding: 20px;
-    overflow-y: scroll;
+  padding: 20px;
+  overflow-y: scroll;
 }
 
 .container > p {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .senderName {
-    text-align: right;
+  text-align: right;
 }
 
 .messageRecipient {
-    background-color: #e1f1f4;
-    width: 300px;
-    padding: 9px;
-    border-radius: 10px;
+  background-color: #e1f1f4;
+  width: 300px;
+  padding: 9px;
+  border-radius: 10px;
 }
 
 .messageSender {
-    color: white;
-    background-color: rgb(39,135,245);
-    max-width: 300px;
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: auto;
-    font-size: 15px;
+  color: white;
+  background-color: rgb(39, 135, 245);
+  max-width: 300px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: auto;
+  font-size: 15px;
 }
 .chat_logo {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 /* .status {
     position: fixed;

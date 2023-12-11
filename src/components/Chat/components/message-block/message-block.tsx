@@ -47,6 +47,7 @@ useEffect(() => {
     <div className={styles.messageBlock}>
       <form className={styles.form} onSubmit={handleSend}>
         <input
+        placeholder="Введите сообщение"
           type="text"
           className={styles.userMessage}
           value={message}
