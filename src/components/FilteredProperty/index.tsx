@@ -45,7 +45,7 @@ const FilteredProperty = () => {
     setMaxPrice(e.target.value);
   };
   const property = useSelector((state) => state.property.property);
-  console.log(filteredProperty);
+  // console.log(filteredProperty);
 
   const handleFilter = () => {
     const filter = property?.filter((item) => {
@@ -68,7 +68,7 @@ const FilteredProperty = () => {
   }, [dispatch]);
 
   if (filteredProperty.length > 0) {
-    navigate("/cardsProperty");
+    navigate("/cardsProperty/Купить");
   }
 
   return (

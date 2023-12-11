@@ -1,287 +1,300 @@
-
-.wrapper1{
-font-family: "Gill Sans", sans-serif;
-
+* {
+  font-family: "Gill Sans", sans-serif;
 }
-.wrapper2{
-    margin-left: 100px;
-
+.wrapper1 {  
+  width: 1600px;
+  background-image: url("https://w.forfun.com/fetch/5b/5b8af025bee3bd3effb35a68d74afba5.jpeg");
+  background-position: top;
+  background-size: cover;
+  font-family: 'TT Norms Pro', sans-serif;
 }
-.navig1{
-    width: 100%;
-
+.wrapper3 {
+  margin-top: 40px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navig1 {
+  width: 100%;
   padding-top: 20px;
 }
-.navig2{
-display: flex;
-justify-content: space-around;
-list-style-type: none;
-font-size: 20px;
-cursor: pointer;
-align-items: center;
-border: 1px solid rgb(240, 164, 164);
-}
-li span{
-    color: black;
-}
-.images{
-    margin-top: 20px;
-    margin-left: 30px;
-    display: flex;
-}
-.img1{
-   width: 600px;
-   padding-left: 10px;
-}
-.img2{
-    width: 290px;
-}
-.img3{
-    width: 290px;
-    padding-top: 8px;
-
-}
-.image{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 10px;
-  
+.navig2 {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  font-size: 18px;
+  cursor: pointer;
+  align-items: center;
 }
 
-.text{
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
- 
+.images {
+  margin-left: 20px;
+  width: 900px;
+  /* margin-top: 40px; */
 }
-.text2{
-    font-size: 16px;
-  padding-bottom: 5px;
+.image img{
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px; */
+  width: 900px;
+  height: 490px;
+}
+.price{
+  color: white;
+  font-weight: 600;
+}
+.text {
+  color: rgba(255, 255, 255, 0.907);
+  font-size: 26px;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.text2 {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.908);
   display: flex;
   justify-content: space-between;
 }
-.details{
-    padding: 20px;
-    width: 880px;
-    margin-top: 20px;
-    margin-left: 50px;
-   border: 1px solid black;
+.details {
+  padding: 20px;
+  width: 1370px;
+  margin-top: 50px;
+  border-radius: 20px;
+  margin-left: 50px;
+  /* background-color: rgba(100, 110, 180, 0.2); */
+  background: #0000004d;
+  border: 1px solid rgba(100, 109, 180, 0.368);
 }
-a{
-    text-decoration: none;
-    color: rgb(6, 6, 255);
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.908);
+  font-size: 20px;
 }
-.txtPrice{
-  font-size: 12px;
-    padding: 10px;
-    color: rgb(3, 139, 3);
-    border: 1px solid #a0f8a0;
-    background: #98ff98;
-    border-radius: 20px;
+.txtPrice {
+  font-size: 13px;
+  padding: 15px;
+ color: white;
+ background-color: black;
+  border-radius: 20px;
 }
 
-.button1{
-    margin-top: 20px;
-    font-size: 12px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
-    cursor: pointer;
-}
-.button2{
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 12px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
-    cursor: pointer;
-}
-.button3 img{
-    padding: 7px 6px 5px 6px;
-width: 30px;
-}
-.button3{
-    margin-left: 20px;
-    position: absolute;
-    bottom: 47px;
-    border: 1px solid black;
-    border-radius: 20px;
-    cursor: pointer;
-}
-.button4 img{
-    width: 30px;
-    padding: 7px 6px 5px 6px;
-}
-.button4{
-    margin-left: 60px;
-    position: absolute;
-    bottom: 47px;
-    border: 1px solid black;
-    border-radius: 20px;
-    cursor: pointer;
-}
-.priceForBuyer{
-    margin-left: 310px;
-   color: grey;
-}
-.admin{
-    width: 200px;
-    border: 1px solid black;
-margin-left: 150px;
-border-radius: 50px;
-}
-.avatar{
-    margin-left: 48px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    width: 100px; 
-    border-radius: 100px;
-}
-.adminName{
-    margin-left: 30px;
-}
-.adminNumber{
-    margin-left: 30px;
-}
-.adminButtons{
-   align-items: center;
-    padding: 10px;
-    margin-top: 20px;
- margin-left: 10px;
-}
-.sendMessageForAdmin{
-    align-items: center;
-    width: 150px;
-    height: 30px;
-margin-bottom: 30px;
-border: 1px solid rgb(254, 110, 110);
-border-radius: 10px;
-color: white;
-background-color: rgb(241, 108, 108);
-cursor: pointer;
-}
-.toBook{
-     width: 150px;
-     height: 30px;
-     align-items: center;
-  border: 1px solid rgb(26, 26, 255);
+.button1 {
+  margin-top: 20px;
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.704);
+  background-color: rgba(255, 255, 255, 0.816);;
+  border-radius: 20px;
   cursor: pointer;
-  background-color:  rgb(149, 182, 252);
-  color: rgb(0, 85, 255);
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.priceForBuyer {
+  color: rgba(255, 255, 255, 0.908);
+  font-size: 20px;
+}
+.admin {
+  
+  width: 400px;
+  height: 500px;
+  border: 1px solid rgba(100, 109, 180, 0.368);
+margin-right: 180px;
+  border-radius: 50px;
+  color: white;
+  /* background-color: rgba(100, 110, 180, 0.2); */
+  background: #0000004d;
+}
+.avatar {
+  margin-left: 100px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+.adminName {
+  margin-left: 135px;
+  font-size: 18px;
+}
+.adminNumber {
+  margin-left: 115px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.adminButtons {
+  display: flex;
+ flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+
+}
+.sendMessageForAdmin {
+  width: 200px;
+  height: 50px;
+  font-size: 17px;
+  align-items: center;
+  border: 1px solid rgba(100, 109, 180, 0.368);
+  cursor: pointer;
+  margin-bottom: 20px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border-radius: 10px;
 }
-.lk{
-    padding: 20px;
-    width: 880px;
-    margin-top: 20px;
-margin-left: 50px;
-border: 1px solid black;
-
+.toBook {
+  width: 200px;
+  height: 50px;
+  font-size: 17px;
+  align-items: center;
+  border: 1px solid rgba(100, 109, 180, 0.368);
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
 }
-.textLk{
-    font-size: 14px;
-    color: grey;
-    margin-top: 20px;
+.lk {
+  color: white;
+  padding: 20px;
+  width: 1370px;
+  margin-top: 20px;
+  margin-left: 50px;
+  /* background-color: rgba(100, 110, 180, 0.2); */
+  background: #0000004d;
+      border-radius: 20px;
+      border: 1px solid rgba(100, 109, 180, 0.368);
 }
-.lkText{
-    font-size: 20px;
+.textLk {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.908);
+  margin-top: 10px;
 }
-.signInLk{
- padding: 10px;
- margin-top: 20px;
-border-radius: 50px;
-border: 1px solid rgb(26, 26, 255);
-background-color:  rgb(149, 182, 252);
-cursor: pointer;
-color: rgb(0, 85, 255);
+.lkText {
+  font-size: 26px;
 }
-.discription{
-    width: 880px;
-    margin-left: 50px;
- box-sizing: border-box;
- margin-top: 20px;
- border: 1px solid black;
- padding: 20px;
-
+.signInLk {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.704);
+  background-color:rgba(255, 255, 255, 0.908);
+  cursor: pointer;
+  font-size: 14px;
+  color:black
 }
-.discript{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.views img{
-width: 20px;
-}
-.views{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 30px;
-    color: gray;
-    font-size: 14px;
+.discription {
+  color: rgba(255, 255, 255, 0.908);
+  width: 1370px;
+  margin-left: 50px;
+  box-sizing: border-box;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  /* background-color: rgba(100, 110, 180, 0.2); */
+  background: #0000004d;
+    border: 1px solid rgba(100, 109, 180, 0.368);
+  border-radius: 20px;
+  padding: 20px;
 }
 .textDiscription{
-  
+font-size: 22px;
 }
-.text_specifications{
-   
-    font-size: 24px;
-    margin-bottom: 20px;
-    
+.discript {
+    color: rgba(255, 255, 255, 0.929);
+  font-size: 26px;
+  margin-bottom: 10px;
 }
-.specifications{
-    margin-left: 50px;;
-    width: 880px;
- box-sizing: border-box;
- margin-top: 20px;
- border: 1px solid black;
- padding: 20px;
+
+
+.text_specifications {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.908);
 }
-.basic_item{
-    display: flex;
-    justify-content: space-between;
-color: gray;
-}
-.text_basic{
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-.text_flat{
+.specifications {
+
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.908);
+  margin-left: 50px;
+  width: 1370px;
+  box-sizing: border-box; 
+  background: #0000004d;
+  /* background-color: rgba(100, 110, 180, 0.44); */
     margin-top: 20px;
-    font-size: 18px;
-    margin-bottom: 30px;
+    border: 1px solid rgba(100, 109, 180, 0.368);
+  border-radius: 20px;
+  padding: 20px 20px 20px 150px;
 }
-.flat_item{
-    display: flex;
-    justify-content: space-between;
-color: gray;
+.basic_item {
+  display: flex;
+  margin-right: 150px;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.908);
+  font-size: 20px;
+  padding-bottom: 5px;
 }
-.the_apartment_remains_for_sale{
-    margin-top: 20px;
-    font-size: 18px;
-    margin-bottom: 30px;
+
+.text_basic {
+  font-size: 22px;
+  margin-bottom: 30px;
 }
-.of_home{
-    margin-top: 20px;
-    font-size: 18px;
-    margin-bottom: 30px;
+.text_flat {
+  margin-top: 20px;
+  font-size: 22px;
+  margin-bottom: 30px;
 }
-.yard{
-    margin-top: 20px;
-    font-size: 18px;
-    margin-bottom: 30px;
+.flat_item {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 150px;
+  color: rgba(255, 255, 255, 0.908);
+  font-size: 20px;
+  padding-bottom: 5px;
+
 }
-.free_legal_protection{
-    margin-top: 20px;
-    font-size: 18px;
+
+.the_apartment_remains_for_sale {
+  margin-top: 20px;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.of_home {
+  margin-top: 22px;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.yard {
+  margin-top: 20px;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.free_legal_protection {
+  margin-top: 20px;
+  font-size: 22px;
   margin-top: 20px;
 }
-.mini_txt{
-    font-size: 14px;
-   margin-top: 10px;
-   margin-bottom: 20px;
+.mini_txt {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
-.yes{
+.yes {
   margin-top: 15px;
+  font-size: 20px;
+}
+.Comments{
+  width: 1370px;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+
+
+
 }

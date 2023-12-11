@@ -5,12 +5,20 @@ import { Link } from "react-router-dom";
 
 
 const Footer = () => {
+
+  const scrolling = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
   return (
     <>
       <div className={styles.mainDiv}>
         <ul>
           <li></li>
-          <Link to={"/"}><img src={logo} alt="" /></Link>
+          <Link onClick={scrolling} to={"/"} className={styles.logoPlace}><img src={logo} alt="" /></Link>
           <li></li>
           <li></li>
         </ul>

@@ -6,6 +6,7 @@
 }
 
 .mainDiv header {
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -27,6 +28,13 @@
   gap: 15px;
   display: flex;
   font-size: 22px;
+}
+.rightMenu li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
 }
 .rightMenu ul {
   gap: 15px;
@@ -82,7 +90,7 @@
   background-color: transparent;
 }
 .logoPlace {
-  margin-right: -6%;
+  margin-right: -1%;
 }
 .logoPlace img {
   height: 70px;
@@ -94,4 +102,22 @@
 .imageUser {
   width: 50px;
   height: 50px;
+  border-radius: 50%;
+  &:hover {
+    box-shadow: 0px 0px 20px 1px #151428;
+    cursor: pointer;
+  }
+}
+#userName {
+  color: white;
+  font-weight: 600;
+  font-weight: 600;
+  font-style: italic;
+  &:hover {
+    filter: drop-shadow(2px 4px 12px black);
+  }
+}
+.rightMenu span {
+  color: white;
+  margin: 5px;
 }

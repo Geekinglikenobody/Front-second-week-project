@@ -1,34 +1,121 @@
+@font-face {
+  font-family: "Raleway", sans-serif;
+  src: url("../../assets/шрифт/Raleway-VariableFont_wght.ttf ");
+}
+@font-face {
+  font-family: "Mont";
+  src: url("../../assets/mont/mont_extralightdemo.ttf");
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
 .card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    width: 1200px;
-    margin: 0 auto;
-    margin-top: 30px;
-    overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  overflow: hidden;
+  padding-bottom: 50px;
+  min-height: 570px;
 }
 
 .card_item {
-    overflow: hidden;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    /* width: 300px; */
+  overflow: hidden;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  background-color: #181849;
+  /* width: 300px; */
 }
 
-.card_item .image {
-    height: 400px;
-    background-color: aqua;
-}
 img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    overflow: hidden;
+  width: 100%;
+
+  object-fit: cover;
+  overflow: hidden;
 }
 .card_item_info {
-    /* height: 400px; */
+  align-items: center;
+  padding: 10px;
+}
+.tip:hover, .quadrature:hover, .namePro:hover,.floor:hover,.price:hover {
+    text-decoration: underline;
+  }
+.watchBtn {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  height: 40px;
+  padding: 3px;
+}
+
+.watchBtn {
+  border-radius: 10px;
+  color: white;
+  transition: 0.2s linear;
+  background: #0b63f6;
+}
+
+.watchBtn:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #3c82f8;
+}
+
+.image img {
+  height: 300px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+  background-color: #04042d;
+}
+
+.line_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.logoImg {
+  height: 100px;
+  width: 100px;
+}
+
+.namePro {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 15px;
+  color: white;
+}
+.tip,
+.quadrature,
+.floor {
+  font-size: 18px;
+  color: white;
+  font-family: "Mont";
+  font-weight: bold;
+}
+
+.slick-dots li.slick-active button:before {
+    color: white;
+}
+
+.trash_box {
+    color: white;
 }

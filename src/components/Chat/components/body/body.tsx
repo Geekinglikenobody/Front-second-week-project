@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Body = ({ messages,status }) => {
-  console.log(messages);
+  // console.log(messages);
   const navigate = useNavigate();
   const handleLeave = () => {
     localStorage.removeItem("user");

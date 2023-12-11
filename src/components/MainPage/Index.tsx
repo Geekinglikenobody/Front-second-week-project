@@ -11,18 +11,23 @@ import {
   useAnimation,
 } from "framer-motion";
 import FilteredProperty from "../FilteredProperty";
-
 import { Link, Element } from "react-scroll";
-
-// function useParallax(value: MotionValue<number>, distance: number) {
-//   return useTransform(value, [0, 1], [-distance, distance]);
-// }
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
 const MainPage = () => {
+  const [active, setActive] = useState(null);
+
+
+  const handleClick = (idx) => {
+    setActive(idx);
+    if(active === idx) {
+      setActive(null)
+    }
+  };
+
   const appartments = [
     {
       imgSrc: [
@@ -93,10 +98,6 @@ const MainPage = () => {
       typeRemont: "Тип ремонта - Постоянный",
     },
   ];
-
-  // const ref = useRef(null);
-  // const { scrollYProgress } = useScroll({ target: ref });
-  // const y = useParallax(scrollYProgress, 200);
 
   const icon = {
     hidden: (custom) => ({
@@ -191,10 +192,16 @@ const MainPage = () => {
       <div className={styles.secondViev}>
         <section className={styles.cardsOfItems}>
           {appartments.map((apartment, index) => (
-            <div className={styles.cardOfItem} key={index}>
+            <div
+              className={`${styles.cardOfItem} ${
+                active === index ? styles.cardOfItemActive : ''
+              }`}
+              key={index}
+              onClick={() => handleClick(index)}
+            >
               <article>
-                {apartment.imgSrc.map((i) => {
-                  return <img key={index} src={i} alt={i} />;
+                {apartment.imgSrc.map((element, i) => {
+                  return <img key={i} src={element} alt={element} />;
                 })}
               </article>
               <div className={styles.discription}>
