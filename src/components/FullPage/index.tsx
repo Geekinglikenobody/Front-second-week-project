@@ -55,12 +55,11 @@ const selectProp = useParams();
           <div className={style.adminName}>Назиров Расул</div>
           <div className={style.adminNumber}>☏ +7 928 *** ** ** </div>
           <div className={style.adminButtons}>
-            <button className={style.sendMessageForAdmin}>
+            <Link to={"/formChat"}><button className={style.sendMessageForAdmin}>
               Написать специалисту
             </button>
-            <button className={style.toBook}>
-              ❤ <b>В избранное</b>
-            </button>
+            </Link>
+            <button className={style.toBook}>Забронировать</button>
           </div>
         </div>
       </div>

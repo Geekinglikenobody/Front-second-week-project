@@ -10,6 +10,8 @@ import logoImg from "../../assets/save.png";
 import trashBox from "../../assets/icons8-мусор.svg";
 const Favorite = () => {
   const dispatch = useDispatch();
+  const imgPoint = "i"
+
   useEffect(() => {
     dispatch(fetchFavorites());
   }, [dispatch]);
@@ -34,7 +36,7 @@ const Favorite = () => {
             <Slider {...settings}>
               {item.img.map((res) => (
                 <div className={styles.image}>
-                  <img src={res} alt="" />
+                    {imgPoint === res[0] ? <img src={`http://localhost:3030/${res}`} alt="" /> :<img src={res} alt="" />} 
                 </div>
               ))}
             </Slider>
