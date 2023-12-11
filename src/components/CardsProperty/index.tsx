@@ -20,7 +20,8 @@ const CardsProperty = () => {
 
   useEffect(() => {
     dispatch(fetchProperty());
-  }, []);
+    window.scrollTo(0,0)
+  }, [dispatch]);
   const filteredPropertystate = useSelector(
     (state) => state.property.filteredProperty
   );
@@ -34,6 +35,7 @@ const CardsProperty = () => {
     }
   })
   );
+const imgPoint = "i"
 
   const settings = {
     dots: true,
@@ -52,7 +54,7 @@ const CardsProperty = () => {
             <Slider {...settings}>
               {item.img.map((res) => (
                 <div className={styles.image}>
-                  <img src={res} alt="" />
+                 {imgPoint === res[0] ? <img src={`http://localhost:3030/${res}`} alt="" /> :<img src={res} alt="" />} 
                 </div>
               ))}
             </Slider>
@@ -75,7 +77,7 @@ const CardsProperty = () => {
             </Link>
             </div>
           </div>
-        ))}
+        )).reverse()}
       </div>
       </div>
     );

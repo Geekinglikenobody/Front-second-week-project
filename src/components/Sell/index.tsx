@@ -11,11 +11,26 @@ import styles from "./Sell.module.css";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { addProperty, fetchProperty } from "../../features/propertySlice";
+import {ToastContainer, toast} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import { useNavigate } from "react-router";
+const notify = () => {
+  toast.success('🦄 Wow so easy!', {
+    position: "top-center",
+    autoClose: 1000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
+}
 
 const Sell = () => {
   const dispatch = useDispatch();
-
-  const [typeSell, setTypeSell] = useState("Продажа");
+  const navigate = useNavigate()
+  const [typeSell, setTypeSell] = useState("Купить");
   const [address, setAddress] = useState("");
   const [typeFloor, setTypeFloor] = useState("Квартира");
   const [rooms, setRooms] = useState("");
@@ -41,8 +56,13 @@ const Sell = () => {
        images,
       })
     );
-
+    setTimeout(() => {
+      navigate("/cardsProperty/Купить")
+    }, 1000);
   };
+
+
+
 
   return (
     <div className={styles.realMainDiv}>
@@ -55,19 +75,19 @@ const Sell = () => {
           <div className={styles.sell}>
             <button
               className={`${styles.typeSell} ${
-                typeSell === "Продажа" ? styles.typeSellActive : ""
+                typeSell === "Купить" ? styles.typeSellActive : ""
               }`}
-              onClick={() => setTypeSell("Продажа")}
+              onClick={() => setTypeSell("Купить")}
             >
-              Продажа
+              Купить
             </button>
             <button
-              onClick={() => setTypeSell("Аренда")}
+              onClick={() => setTypeSell("Снять")}
               className={`${styles.typeSell} ${
-                typeSell === "Аренда" ? styles.typeSellActive : ""
+                typeSell === "Снять" ? styles.typeSellActive : ""
               }`}
             >
-              Аренда
+              Снять
             </button>
           </div>
           <div className={styles.h3}>
@@ -214,9 +234,12 @@ const Sell = () => {
             </span>
           </div>
           <div className={styles.span_up}>
-            <button onClick={handleAddAnnounc} className={styles.btn6}>
+            <button onClick={() => {
+              handleAddAnnounc();
+              notify()}} className={styles.btn6}>
               Разместить объявление
             </button>
+              <ToastContainer/>
           </div>
         </div>
       </div>
