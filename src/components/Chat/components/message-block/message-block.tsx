@@ -9,7 +9,7 @@ const MessageBlock = ({socket}) => {
   const user = useSelector(state => state.application.user.login)
   const image = useSelector(state => state.application.user.avatar)
 
-  console.log(image)
+  // console.log(image)
 
   const handleSend = (e) => {
     e.preventDefault()

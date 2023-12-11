@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { fetchProperty } from "../../features/propertySlice";
 import Comments from "../Comments";
 export const FullPage = () => {
-  const selectProp = useParams();
+const selectProp = useParams();
 
   const property = useSelector((state) =>
     state.property.property?.find((item) => {
@@ -55,12 +55,11 @@ export const FullPage = () => {
           <div className={style.adminName}>Назиров Расул</div>
           <div className={style.adminNumber}>☏ +7 928 *** ** ** </div>
           <div className={style.adminButtons}>
-            <button className={style.sendMessageForAdmin}>
+            <Link to={"/formChat"}><button className={style.sendMessageForAdmin}>
               Написать специалисту
             </button>
-            <button className={style.toBook}>
-              ❤ <b>В избранное</b>
-            </button>
+            </Link>
+            <button className={style.toBook}>Забронировать</button>
           </div>
         </div>
       </div>

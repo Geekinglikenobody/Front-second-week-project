@@ -1,0 +1,94 @@
+.mainDiv {
+  background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1614441435_16-p-temno-sinii-fon-oboi-20.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.viceMain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.forms {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+}
+.forms form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.forms form input {
+  padding-left: 10px;
+  width: 50%;
+  height: 4vh;
+  font-size: 17px;
+}
+.formsButton button {
+  width: 94px;
+  height: 32px;
+  font-size: 15px;
+  font-family: revert;
+  border-radius: 10px;
+  border: none;
+  background: blueviolet;
+  color: white;
+  &:hover {
+    cursor: pointer;
+    background: rgb(150, 55, 240);
+  }
+}
+.viceMain h1 {
+  color: bisque;
+  font-size: 100px;
+}
+#thankYou {
+  color: wheat;
+  font-size: 5vh;
+  text-align: center;
+}
+.appeal {
+  /* background: #ebebeb; */
+  width: 45%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.appeal h2 {
+  filter: drop-shadow(2px 4px 6px black);
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  font-family: sans-serif;
+}
+.formsButton {
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.complaintAccepted {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.complaintAccepted h4 {
+  text-align: center;
+  font-size: 30px;
+}
+#onMain {
+  color: rgb(184, 184, 184);
+  filter: contrast(0.5);
+  &:hover {
+    color: white;
+  }
+}
