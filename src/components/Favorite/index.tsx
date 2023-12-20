@@ -16,7 +16,7 @@ const Favorite = () => {
     dispatch(fetchFavorites());
   }, [dispatch]);
   const propertyInFavorite = useSelector(
-    (state) => state.favorite.favorites.properties
+    (state) => state.favorite.favorites?.properties
   );
   console.log(propertyInFavorite);
 
