@@ -10,10 +10,6 @@ import CardsProperty from "../CardsProperty";
 import { Link, useNavigate } from "react-router-dom";
 import { MotionValue, useScroll, useTransform } from "framer-motion";
 
-function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
-
 const FilteredProperty = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -45,7 +41,6 @@ const FilteredProperty = () => {
     setMaxPrice(e.target.value);
   };
   const property = useSelector((state) => state.property.property);
-  // console.log(filteredProperty);
 
   const handleFilter = () => {
     const filter = property?.filter((item) => {

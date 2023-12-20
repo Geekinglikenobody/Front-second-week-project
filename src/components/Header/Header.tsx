@@ -73,13 +73,13 @@ const Header = forwardRef(() => {
               <ul>
                 <li>
                   <img
-                    src={`http://localhost:3030/${user.avatar}`}
+                    src={`http://localhost:3030/${user?.avatar}`}
                     alt=""
                     className={styles.imageUser}
                     onClick={() => setPlu(!plu)}
                   />
                   <Link id={styles.userName} to={"/"}>
-                    {user.login}
+                    {user?.login}
                   </Link>
                 </li>
                 <li>
@@ -90,7 +90,7 @@ const Header = forwardRef(() => {
                 <li>
                   {user.admin ? (
                     <Link to={"/complains"}>
-                      Заявки{<span>{complains.length}</span>}
+                      Заявки{<span>{complains?.length}</span>}
                     </Link>
                   ) : (
                     <Link to={"/help"}>Помощь</Link>
@@ -158,9 +158,9 @@ const Header = forwardRef(() => {
               <li>
                 <Link to={"/"}>Помощь</Link>
               </li>
-              <li className={styles.lastLi}>
-                <Link to={"/"}>Навостройки</Link>
-              </li>
+              {/* <li className={styles.lastLi}>
+                <Link to={"/"}>Новостройки</Link>
+              </li> */}
             </ul>
           </div>
           {/* <div className={styles.form}>
